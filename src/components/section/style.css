@@ -29,16 +29,10 @@
   flex-wrap: nowrap;
   min-width: 100%;
   overflow-x: auto;
+  margin: 10px 0;
 }
 .horizontal-scroll > div {
   min-width: 50px;
-}
-
-.boxes {
-  display: flex;
-  min-width: 100%;
-  min-height: 200px;
-  overflow-x: auto;
 }
 
 .icon {

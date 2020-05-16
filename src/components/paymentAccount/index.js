@@ -18,7 +18,7 @@ function PaymentAccount(props) {
           </div>
           <div>{props.dueAmount}</div>
         </div>
-        {props.duedate ? (
+        {props.dueDate ? (
           <div className="due-date">
             <div>Due Date</div>
             <div>{props.dueDate}</div>

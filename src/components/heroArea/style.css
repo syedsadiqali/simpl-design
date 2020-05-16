@@ -5,7 +5,7 @@
   width: 100%;
 }
 
-.welcome {
+.welcome-text {
   color: #ffffff;
   font-weight: 500;
   font-size: 18px;
@@ -26,6 +26,13 @@
   margin: 0 0 0 16px;
 }
 
-.welcome img {
+.simpl-logo {
   height: 30px;
+}
+
+.payment-account-boxes {
+  display: flex;
+  min-width: 100%;
+  min-height: 200px;
+  overflow-x: auto;
 }

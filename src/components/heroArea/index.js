@@ -10,12 +10,12 @@ export default function HeroArea(props) {
   return (
     <div className="section first">
       <div className="hero-area">
-        <div className="welcome">
+        <div className="welcome-text">
           Welcome to
-          <img src={simplLogo} alt="" />
+          <img className="simpl-logo" src={simplLogo} alt="" />
         </div>
         <h2 className="sub-head">2 Active Accounts</h2>
-        <div className="boxes">
+        <div className="payment-account-boxes">
           <PaymentAccount
             logo={simplLogoColor}
             dueAmount={"₹1800"}
@@ -30,8 +30,13 @@ export default function HeroArea(props) {
             billOverdue={false}
             simplAccount={false}
           />
+          <EmptySpace width="10px"/>
         </div>
       </div>
     </div>
   );
+}
+
+function EmptySpace(props){
+  return <div style={{minWidth:`${props.width}`}}></div>
 }

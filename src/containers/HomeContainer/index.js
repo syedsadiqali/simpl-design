@@ -17,7 +17,7 @@ function HomeContainer() {
   return (
     <div className="app-container">
       <HeroArea />
-      <Section header="Recharges and Bill Payments">
+      <Section header="Recharges and pay bills">
         <IconElements
           iconsArray={rechargesAndBillPayments}
           horizontalScroll={false}
@@ -26,7 +26,7 @@ function HomeContainer() {
       <Section header="You can also use Simpl on">
         <IconElements iconsArray={appsYouCanUse} horizontalScroll={true} />
       </Section>
-      <Section header="Transactions">
+      <Section header="Recent transactions">
         <TransactionRow
           icon={zomato}
           name={"Zomato"}
