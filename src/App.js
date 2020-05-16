@@ -1,25 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+
+import { bottomNavigation } from "./icons";
+import { IconElements } from "./Utils/iconUtil";
+
+import "./App.css";
+import HomeContainer from "./containers/HomeContainer";
+import TabUnderConstruction from "./containers/TabUnderConstruction";
 
 function App() {
+  // loading state
+  const [loading, setLoading] = useState(true);
+
+  // tab active state
+  const [tabActive, setTabActive] = useState("Home");
+
+  // loading animation mock timer (for reveal animation)
+  useEffect(() => {
+    let timer = setTimeout(() => setLoading(false), 1000);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {loading ? (
+        <div className="loader"></div>
+      ) : (
+        <>
+          {tabActive === "Home" ? (
+            <HomeContainer />
+          ) : (
+            <TabUnderConstruction activeTab={tabActive} />
+          )}
+          <footer className="fixed-bottom">
+            <IconElements
+              iconsArray={bottomNavigation}
+              bottomNavigation={true}
+              setTabActive={setTabActive}
+              active={tabActive}
+            />
+          </footer>
+        </>
+      )}
+    </>
   );
 }
 

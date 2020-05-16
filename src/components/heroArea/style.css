@@ -1,0 +1,31 @@
+.hero-area {
+  display: block;
+  height: 207px;
+  background: #00d1c1;
+  width: 100%;
+}
+
+.welcome {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+
+.sub-head {
+  font-family: Source Sans Pro, "arial";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  opacity: 0.8;
+  margin: 0 0 0 16px;
+}
+
+.welcome img {
+  height: 30px;
+}

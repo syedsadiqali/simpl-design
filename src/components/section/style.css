@@ -1,0 +1,57 @@
+
+
+.section {
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 20px -5px #bfbfbf;
+}
+
+.section.first {
+  margin-bottom: 120px;
+}
+
+.section-header {
+  border-bottom: 1px solid #c5c5c5;
+  width: 100%;
+}
+
+.section-header p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  margin: 10px;
+  padding-top: 10px;
+  color: #888888;
+}
+
+.horizontal-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  min-width: 100%;
+  overflow-x: auto;
+}
+.horizontal-scroll > div {
+  min-width: 50px;
+}
+
+.boxes {
+  display: flex;
+  min-width: 100%;
+  min-height: 200px;
+  overflow-x: auto;
+}
+
+.icon {
+  margin: auto;
+}
+
+.horizontal-scroll .icon {
+  background: #efefef;
+  padding: 10px 10px 5px 10px;
+  border-radius: 50%;
+}
+
+.icon-group.active p {
+  color: var(--primary-color);
+  font-weight: bold;
+}

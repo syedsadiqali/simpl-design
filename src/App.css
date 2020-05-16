@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
-}
+/* on desktop devices the horizontal scrollbar styling */
+@media (min-width: 412px) {
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 5px;
+  }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  /* Track */
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #02bab0;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+  ::-webkit-scrollbar-thumb:window-inactive {
+    background: #02bab0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* css variables */
+:root {
+  --primary-color: #00d1c1;
+  --secondry-color: #02bab0;
+  --primary-font: "Roboto", "arial";
+  --secondry-font: "Source Sans Pro", "arial";
 }
 
-.App-link {
-  color: #61dafb;
+/* font family */
+* {
+  font-family: var(--primary-font);
 }
 
-@keyframes App-logo-spin {
+/* fixed bottom navigation */
+.fixed-bottom {
+  max-width: 500px;
+  overflow: hidden;
+  background: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0px 0px 20px -5px #bfbfbf;
+}
+
+.bottom-navigation > .icon-group {
+  margin: 10px 0;
+}
+
+/* loader initial circle */
+.loader {
+  animation: scaleIn 1s infinite cubic-bezier(0.36, 0.11, 0.89, 0.32);
+  width: 200px;
+  height: 200px;
+  background: #00d1c1;
+  margin: 50% auto;
+  border-radius: 50%;
+}
+
+/* loader animation keyframes */
+@keyframes scaleIn {
   from {
-    transform: rotate(0deg);
+    transform: scale(0.5, 0.5);
+    opacity: 0.5;
   }
   to {
-    transform: rotate(360deg);
+    transform: scale(10, 10);
+    opacity: 0;
+  }
+}
+
+/* icon util styles */
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.horizontal-scroll.icons {
+  justify-content: inherit;
+}
+
+.icons > div {
+  flex: 1 0 21%;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.icons > div > p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  color: #888888;
+  margin: 5px 0;
+}
+
+.icons:not(.bottom-navigation) .icon:hover {
+  border-radius: 50%;
+  background: #ececec;
+}
+
+.icons:not(.bottom-navigation) .icon:active {
+  border-radius: 50%;
+  background: #ececec;
+  box-shadow: inset 0 0 5px -1px #000000;
+}
+
+.icons.bottom-navigation .icon-group {
+  margin: 0;
+  flex: 1 0 10%;
+  padding: 5px 10px;
+}
+
+.icons.bottom-navigation .icon-group.active {
+  border-top: 2px solid var(--primary-color);
+}
+
+@media (min-width: 500px) {
+  .fixed-bottom {
+    margin-left: -250px;
+    left: 50%;
   }
 }

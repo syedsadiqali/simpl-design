@@ -1,0 +1,9 @@
+.app-container {
+  border-top: 27px solid var(--secondry-color);
+  max-width: 500px;
+  margin: auto;
+}
+
+.empty-space {
+  height: 70px;
+}

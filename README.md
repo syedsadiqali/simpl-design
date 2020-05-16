@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This Project is Made with Create React App, using React Reusable Functional Components.
+
+Following are the instruction to run the project on your local system.
+
 ## Available Scripts
 
 In the project directory, you can run:
